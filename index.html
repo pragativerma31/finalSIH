@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/SocialCalc.js"></script>
+    <link rel="stylesheet" href="./dist/socialcalc.css">
+    <title>SpreadSheet</title>
+    <style>
+      /* Optional: Add some styles to your spreadsheet */
+      #spreadsheet {
+          width: fit-content;
+          /* height: 100%; */
+          /* border: 1px dotted #999; */
+          /* background-color:aquamarine; */
+          /* padding: 5px; */
+      }
+  </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="spreadsheet"></div>
+    <script>
+        $(document).ready(function() {
+            var socialCalcControl = new SocialCalc.SpreadsheetControl();
+            socialCalcControl.InitializeSpreadsheetControl(document.getElementById('spreadsheet'), 3000, 2000, 100);
+            socialCalcControl.ResetSheet();
+        });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
